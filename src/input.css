@@ -6,6 +6,18 @@
     padding: 0;
     box-sizing: border-box;
   }
+ .p-style{
+  font-family: 'Lato', sans-serif;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 640px) {
+  .text-style {
+    font-size: 1rem;
+  }
+}
 }
 @theme {
   /* colors */

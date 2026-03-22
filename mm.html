@@ -1,230 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link href="./src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة طعام - مقبلات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // إعداد خطوط كلاسيكية تشبه الخطوط الأصلية
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'menu-serif': ['Georgia', 'Times New Roman', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-background text-foreground">
+<body class="bg-gray-50 font-menu-serif text-[#1a1a1a]">
 
-<!-- Header -->
-<header class="container mx-auto px-4 sm:px-6 my-6 md:my-10 flex justify-between items-center">
+    <div class="max-w-5xl mx-auto p-6 md:p-12 my-10 bg-white relative overflow-hidden shadow-sm">
+        
+        <div class="absolute top-[-30px] right-[-30px] opacity-10 w-40 h-40 md:w-56 md:h-56 hidden sm:block">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M40,80 Q50,50 80,40 T120,60 T160,40"/>
+                <circle cx="150" cy="50" r="15"/>
+                <circle cx="170" cy="80" r="12"/>
+                <circle cx="130" cy="70" r="13"/>
+                <path d="M120,60 L130,40 L110,35"/>
+            </svg>
+        </div>
 
-<div class="flex items-center gap-4 md:gap-8">
-<img 
-src="./assets/Imag/Logo.svg"
-alt="Logo"
-class="w-[120px] sm:w-[150px] md:w-[207px] h-auto object-contain"
-/>
+        <div class="text-center mb-16 md:mb-24 relative z-10">
+            <h1 class="text-5xl md:text-7xl mb-3 tracking-wide">Starters</h1>
+            <p class="text-gray-500 italic text-sm px-4">This is a section of your menu. Give your section a brief description</p>
+        </div>
 
-<div class="md:hidden flex items-center">
-<i class="fa-solid fa-bars text-xl sm:text-2xl cursor-pointer hover:text-[#5C6B16] transition"></i>
-</div>
-</div>
+        <div class="flex flex-col md:grid md:grid-cols-2 gap-10 lg:gap-16 items-start relative z-10">
+            
+            <div class="w-full">
+                <div class="aspect-square bg-gray-100 overflow-hidden shadow-sm border-2 border-gray-50 w-full max-w-[420px] mx-auto md:mx-0">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" 
+                         alt="Dish" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
 
-<div class="flex items-center gap-3 sm:gap-6 md:gap-10">
+            <div class="w-full space-y-12 md:space-y-16 py-2">
+                
+                <div>
+                    <div class="md:flex md:justify-between md:items-baseline border-b border-dotted border-gray-900 pb-1 mb-2">
+                        <h2 class="text-2xl md:text-3xl font-semibold leading-tight md:max-w-[80%] mb-1 md:mb-0">Grilled Okra and Tomatoes</h2>
+                        <span class="text-2xl font-bold">$20</span>
+                    </div>
+                    <p class="text-gray-500 italic text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
 
-<a href="tel:+86852346000" class="text-xs sm:text-sm md:text-xl font-medium hover:text-[#5C6B16] transition">
-+86 852 346 000
-</a>
+                <div>
+                    <div class="md:flex md:justify-between md:items-baseline border-b border-dotted border-gray-900 pb-1 mb-2">
+                        <h2 class="text-2xl md:text-3xl font-semibold mb-1 md:mb-0">Cucumber Salad</h2>
+                        <span class="text-2xl font-bold">$18</span>
+                    </div>
+                    <p class="text-gray-500 italic text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
 
-<button class="text-[12px] sm:text-base md:text-xl lg:text-2xl border border-white px-3 sm:px-6 py-2 sm:py-3 hover:bg-white hover:text-black transition-all duration-300">
-Reservations
-</button>
+                <div>
+                    <div class="md:flex md:justify-between md:items-baseline border-b border-dotted border-gray-900 pb-1 mb-2">
+                        <h2 class="text-2xl md:text-3xl font-semibold mb-1 md:mb-0">Basil Pancakes</h2>
+                        <span class="text-2xl font-bold">$12</span>
+                    </div>
+                    <p class="text-gray-500 italic text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
 
-</div>
-</header>
+            </div>
+        </div>
+    </div>
+<section class="bg-[#EBF0E4] text-card-foreground">
+  
+  <div class="container mx-auto min-h-screen py-20 px-4 sm:py-32 text-center">
+    
+    <h2 class="font-Rufina text-2xl sm:text-4xl lg:text-5xl font-bold mb-4">
+      Make a Reservation
+    </h2>
 
-<!-- hero -->
+    <span class="font-Lato text-card-muted text-sm sm:text-base leading-relaxed font-bold block">
+      Get in touch with restaurant
+    </span>
 
-<div class="bg-[#233000] text-white overflow-hidden">
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
 
-<section class="relative min-h-screen flex items-center py-10 lg:py-20 px-6 sm:px-10 lg:px-20">
+      <input
+        type="date"
+        class="border border-gray-500 px-4 sm:px-6 py-3 sm:py-4 bg-transparent outline-none w-full"
+        value="2021-06-22"
+      />
 
-<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+      <select
+        class="border border-gray-500 px-4 sm:px-6 py-3 sm:py-4 bg-transparent outline-none w-full"
+      >
+        <option>6:00 pm</option>
+        <option>7:00 pm</option>
+        <option>8:00 pm</option>
+      </select>
 
-<div>
+      <select
+        class="border border-gray-500 px-4 sm:px-6 py-3 sm:py-4 bg-transparent outline-none w-full"
+      >
+        <option>2 Person</option>
+        <option>3 Person</option>
+        <option>4 Person</option>
+      </select>
 
-<h1 class="mb-8">
-Healthy Eating <br>
-is important <br>
-part of lifestyle
-</h1>
+    </div>
 
-<p class="max-w-[280px] mb-12">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu
-</p>
+    <div class="mt-8">
+      <button 
+        type="submit"
+        class="w-full sm:w-auto bg-[#5C6B16] text-white px-6 py-4 sm:py-6 text-sm sm:text-base font-bold uppercase rounded-md hover:bg-[#4c5912] transition-colors duration-300"
+      >
+        Book Now
+      </button>
+    </div>
 
-</div>
-
-<div class="relative">
-
-<img 
-src="./assets/Imag/Image.png"
-alt="Steak Plate"
-class="w-full object-cover"
-/>
-
-<div class="absolute -bottom-10 -left-10 sm:-bottom-16 sm:-left-20">
-
-<img
-src="./assets/Imag/Images.png"
-alt="Spices"
-class="w-[180px] sm:w-[280px] md:w-[350px] lg:w-[450px]"
-/>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Diet section -->
-
-<section class="py-20 px-6 sm:px-10 lg:px-20">
-
-<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-
-<div class="space-y-10">
-
-<img 
-src="./assets/Imag/heroimg3.jpg"
-class="w-full shadow-2xl"
-/>
-
-<div>
-
-<h2 class="mb-6">
-Start to plan <br> your diet today
-</h2>
-
-<p class="max-w-xs">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</p>
-
-</div>
-
-</div>
-
-<div class="flex flex-col gap-10 md:pt-20">
-
-<p class="md:max-w-[250px] md:ml-auto">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</p>
-
-<img
-src="./assets/Imag/heroimg2.jpg"
-class="w-full max-w-sm md:max-w-[380px] ml-auto"
-/>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
-<!-- Menu -->
-
-<section class="relative bg-foreground text-card-foreground py-16">
-
-<div class="container mx-auto px-6">
-
-<div class="max-w-md mb-12">
-
-<h2 class="mb-4">
-Our Menu
-</h2>
-
-<p>
-This is a section of your menu. Give your section a brief description.
-</p>
-
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-<div>
-
-<div class="flex justify-between mb-2">
-
-<h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">
-Deep Sea Snow White Cod Fillet
-</h3>
-
-<span class="text-[#5C6B16]">$20</span>
-
-</div>
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</p>
-
-</div>
-
-<div>
-
-<div class="flex justify-between mb-2">
-
-<h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">
-Steak With Rosemary Butter
-</h3>
-
-<span class="text-[#5C6B16]">$22</span>
-
-</div>
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- reservation -->
-
-<section class="bg-[#EBF0E4]">
-
-<div class="container mx-auto py-20 text-center">
-
-<h2 class="mb-4">
-Make a Reservation
-</h2>
-
-<span>
-Get in touch with restaurant
-</span>
-
-<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-<input type="date" class="border border-gray-500 px-6 py-4 bg-transparent"/>
-
-<select class="border border-gray-500 px-6 py-4 bg-transparent">
-<option>6:00 pm</option>
-<option>7:00 pm</option>
-</select>
-
-<select class="border border-gray-500 px-6 py-4 bg-transparent">
-<option>2 Person</option>
-<option>3 Person</option>
-</select>
-
-</div>
-
-<button class="mt-10 bg-[#5C6B16] text-white px-8 py-4 uppercase hover:bg-[#4c5912]">
-Book Now
-</button>
-
-</div>
-
-</section>
-
-</div>
+</body>
+</html>
