@@ -1,26 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .font-title {
-      font-family: 'Playfair Display', serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-[#E9EEE1] p-8">
 
-<body>
+    <div class="max-w-2xl mx-auto">
+        
+        <div class="text-center mb-10">
+<img src="./assets/Imag/Mint.svg" alt="Thi is Image " class="mb-4 w-[250px] mt-10">
+            <h1 class="text-4xl font-bold mb-2">Make a Reservation</h1>
+            <p class="text-gray-500 italic text-sm font-bold">Get in touch with restaurant</p>
+        </div>
 
+        <form class="space-y-4">
+            
+            <div class="flex gap-4">
+                <input type="text" placeholder="First Name" class="w-1/2 p-3 border border-black bg-transparent">
+                <input type="text" placeholder="Last Name" class="w-1/2 p-3 border border-black bg-transparent">
+            </div>
 
+            <input type="email" placeholder="Email" class="w-full p-3 border border-black bg-transparent">
 
+            <input type="tel" placeholder="Phone" class="w-full p-3 border border-black bg-transparent">
+
+            <div class="flex gap-4">
+      <input
+        type="date"
+        class="border border-gray-500 px-6 py-4 bg-transparent outline-none"
+        value="2021-02-16"
+      />
+                <select class="w-1/2 p-3 border border-black bg-transparent">
+                    <option>6:00 pm</option>
+                    <option>7:00 pm</option>
+                </select>
+            </div>
+
+            <select class="w-full p-3 border border-black bg-transparent">
+                <option>2 Person</option>
+                <option>3 Person</option>
+                <option>4 Person</option>
+            </select>
+
+            <div class="text-center pt-4">
+                <button 
+        type="submit"
+        class="w-[90%] mx-auto sm:w-auto bg-[#5C6B16] text-white px-5 sm:px-10 py-2 sm:py-4 text-xs sm:text-base font-bold uppercase rounded-md hover:bg-[#4c5912] transition-colors duration-300">
+        Book Now
+      </button>
+            </div>
+
+        </form>
+    </div>
 </body>
 </html>
