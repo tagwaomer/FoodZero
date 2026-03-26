@@ -125,7 +125,7 @@
 
   </div>
 
-  <div class="grid md:grid-cols-2 gap-6 mt-6"></div>
+  <div class="grid md:grid-cols-2 gap-6 mt-6">
 
     <div x-show="filter==='all' || filter==='starter'" class="group relative overflow-hidden">
       <img src="./assets/Imag/Feature Image5.png"
@@ -150,7 +150,87 @@
   </div>
 
 </section>
-
 <script src="https://unpkg.com/alpinejs" defer></script>
+<!-- footer section -->
+ <footer class="bg-background text-foreground font-Rufina pt-12 pb-8 sm:pt-16 sm:pb-10">
+  <div class=" container mx-auto px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12 lg:gap-x-20">
+
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h2 class="text-4xl sm:text-5xl lg:text-[56px] font-bold  text-white">
+          Food <br> Zero.
+        </h2>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="text-lg sm:text-xl mb-6 font-medium tracking-wide uppercase text-white/90">
+          Contact
+        </h3>
+        <div class="space-y-4 text-sm sm:text-base text-gray-400">
+          <p>
+            <a href="tel:+186852346000" class="hover:text-[#5C6B16] transition-colors duration-300 italic">
+              +1 86 852 346 000
+            </a><br>
+            <a href="mailto:info@foodzero.com" class="hover:text-[#5C6B16] transition-colors duration-300">
+              info@foodzero.com
+            </a>
+          </p>
+          <p >
+            1959 Sepulveda Blvd.<br>
+            Culver City, CA, 90230
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h3 class="text-lg sm:text-xl mb-6 font-medium  text-white/90">
+          Never Miss a Recipe
+        </h3>
+        
+        <form >
+     <div class="flex flex-col sm:flex-row gap-4  ">
+  <input 
+    id="footer-email"
+    type="email" 
+    placeholder="Email Address" 
+    class="flex-1 px-4 py-3 sm:py-4 text-sm sm:text-base text-white border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-[#5C6B16] focus:border-[#5C6B16] bg-transparent placeholder-gray-300"
+    required
+  />
+  <button 
+    type="submit" 
+    class="w-full sm:w-auto bg-[#5C6B16] text-white px-6 py-3 sm:py-4 text-sm sm:text-base font-bold uppercase rounded-md hover:bg-[#4c5912] transition-colors duration-300"
+  >
+    Subscribe
+  </button>
+</div>
+          <p class="text-xs mt-4  italic">
+            Join our subscribers and get the best recipes delivered each week!
+          </p>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="border-t border-dashed  my-12 "></div>
+
+    <div class="flex flex-col  md:flex-row items-center justify-between gap-8">
+      
+      <p class="text-xs sm:text-lg italic">
+        © 2026 Zero Inc. All rights Reserved
+      </p>
+  <div class="flex gap-5 text-lg">
+
+        <i class="fa-brands fa-instagram hover:text-[#5C6B16] cursor-pointer transition duration-300"></i>
+        <i class="fa-brands fa-twitter hover:text-[#5C6B16] cursor-pointer transition duration-300"></i>
+        <i class="fa-brands fa-facebook hover:text-[#5C6B16] cursor-pointer transition duration-300"></i>
+        <i class="fa-brands fa-youtube hover:text-[#5C6B16] cursor-pointer transition duration-300"></i>
+
+      </div>
+      
+  </div>
+</footer>
+
+
 </body>
 </html>
