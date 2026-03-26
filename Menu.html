@@ -8,40 +8,56 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<!-- header_______menu -->
- <section class="relative min-h-screen text-white">
-  <div class="absolute inset-0 bg-black/40"></div>
+<!-- header_______menu --> 
+<section class="relative min-h-screen text-foreground">
+
+  <div class="absolute inset-0 bg-card-foreground/70"></div>
   <img
     src="./assets/Imag/headerMenu.png"
     alt="This is Image"
     class="absolute inset-0 w-full h-full object-cover" /> 
-  <header class="relative z-10 container mx-auto py-9 px-4 sm:px-6 my-6 md:my-10 flex justify-between items-center">
-    <div class="flex items-center gap-4 md:gap-8">
+
+  <header class="relative z-10 container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
+
+    <div class="flex items-center">
       <img 
         src="./assets/Imag/Logo.svg"
         alt="This is Image"
-        class="w-[120px] sm:w-[150px] md:w-[207px] h-auto"  />
-      <div class="md:hidden flex items-center">
-        <i class="fa-solid fa-bars text-xl sm:text-2xl cursor-pointer hover:text-[#5C6B16] transition"></i>
-      </div>
+        class="w-[140px] sm:w-[170px] md:w-[200px]" />
     </div>
-    <div class="flex items-center gap-3 sm:gap-6 md:gap-10">
 
+    <nav class="hidden lg:flex items-center gap-8 xl:gap-12 font-Inter text-base xl:text-lg">
+      <a href="./index.html" class="hover:text-[#5C6B16] transition">Home</a>
+      <a href="./Menu.html" class="hover:text-[#5C6B16] transition">Menu</a>
+      <a href="./contact.html" class="hover:text-[#5C6B16] transition">Contact</a>
+      <a href="./about.html" class="hover:text-[#5C6B16] transition">About</a>
+      <a href="./grids.html" class="hover:text-[#5C6B16] transition">Grids</a>
+    </nav>
+
+    <div class="flex items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
       <a href="tel:+86852346000"
-        class="font-Inter text-xs sm:text-sm md:text-xl font-medium hover:text-amber-900 transition">
+         class="hidden sm:flex items-center gap-2 text-sm md:text-base lg:text-lg whitespace-nowrap hover:text-[#5C6B16] transition">
+        <i class="fa-solid fa-phone text-xs"></i>
         +86 852 346 000
       </a>
+
       <button
-        class="font-Rufina text-[12px] sm:text-base md:text-xl lg:text-2xl border border-white px-3 sm:px-6 py-2 sm:py-3 hover:bg-white hover:text-black transition-all duration-300">
+        class="border border-foreground px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition duration-300">
         Reservations
       </button>
+
+      <div class="lg:hidden flex items-center">
+        <i class="fa-solid fa-bars text-xl cursor-pointer hover:text-[#5C6B16] transition"></i>
+      </div>
     </div>
+
   </header>
-  <div class=" relative container mx-auto sm:px-10 lg:px-0">
+<div class=" relative container mx-auto sm:px-10 lg:px-0 mt-20">
   <h2 class="font-Rufina text-[48px] sm:text-[64px] lg:text-[90px] leading-[1.1] mb-6 px-4 sm:px-7">View Our <br> New Menu</h2>
     <p class="font-Lato text-gray-300 text-xs sm:text-sm max-w-[380px] italic mb-12">The freshest ingredients for you every day</p>
     </div>
-</section> 
+
+</section>
 <!--starters section -->
 <section>
     <div class="max-w-5xl mx-auto p-4 md:p-10  relative overflow-hidden">
