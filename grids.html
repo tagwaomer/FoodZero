@@ -6,6 +6,7 @@
   <title>Grids</title>
   <link href="./src/output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- header grids -->
@@ -52,7 +53,7 @@
     </div>
 
   </header>
-
+<!-- hero section -->
   <div class="relative flex flex-col items-center justify-center text-center mt-20 sm:mt-28">
     <h2 class="font-Rufina text-[48px] sm:text-[64px] lg:text-[90px] leading-[1.1] mb-6 px-4 sm:px-6 lg:px-0">
       Portfolio - Grids
@@ -67,5 +68,89 @@
   </div>
 
 </section>
+<!--  diner and drinks section -->
+ <section x-data="{ filter: 'all' }" class="max-w-6xl mx-auto py-16 px-4">
+
+  <div class="flex flex-wrap justify-center gap-6 text-gray-500 text-sm mb-10">
+    <button @click="filter='all'" :class="filter==='all' ? 'text-black border-b border-black pb-1' : ''">All</button>
+    <button @click="filter='starter'" :class="filter==='starter' ? 'text-black border-b border-black pb-1' : ''">Starter</button>
+    <button @click="filter='lunch'" :class="filter==='lunch' ? 'text-black border-b border-black pb-1' : ''">Lunch</button>
+    <button @click="filter='dinner'" :class="filter==='dinner' ? 'text-black border-b border-black pb-1' : ''">Dinner</button>
+    <button @click="filter='drinks'" :class="filter==='drinks' ? 'text-black border-b border-black pb-1' : ''">Drinks</button>
+     <button @click="filter='sweets'" :class="filter==='sweets' ? 'text-black border-b border-black pb-1' : ''">Sweets</button>
+    <button @click="filter='fruits'" :class="filter==='fruits' ? 'text-black border-b border-black pb-1' : ''">Fruits</button>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div x-show="filter==='all' || filter==='dinner'|| filter==='lunch' " class="group relative md:col-span-2 overflow-hidden">
+      <img src="./assets/Imag/Feature Image.png"
+           class="w-full h-[520px] object-cover transition duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+      <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition">
+        <h2 class="text-xl">Premium Deep Sea Snow White Cod Fillet</h2>
+        <span>Launch . Dinner</span>
+      </div>
+    </div>
+
+    <div x-show="filter==='all' || filter==='drinks'|| filter==='fruits' " class="group relative overflow-hidden">
+      <img src="./assets/Imag/Feature Image2.png"
+           class="w-full h-[520px] object-cover transition duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+      <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition">
+        <h2>Option of natural wine available</h2>
+        <span>Drink .Fruits </span>
+      </div>
+    </div>
+
+    <div x-show="filter==='all'|| filter==='lunch' || filter==='starter'" class="group relative overflow-hidden">
+      <img src="./assets/Imag/Feature Image3.png"
+           class="w-full h-[520px] object-cover transition duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+      <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition">
+        <h2>Best pumpkin for pumpkin soup</h2>
+        <span>Launch  . Starters </span>
+      </div>
+    </div>
+
+    <div x-show="filter==='all' || filter==='dinner'filter==='lunch' " class="group relative md:col-span-2 overflow-hidden">
+      <img src="./assets/Imag/Feature Image4.png"
+           class="w-full h-[520px] object-cover transition duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+      <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition">
+        <h2>Strip Steak With Rosemary Butter</h2>
+                <span> Dinner . Launch  </span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+    <div x-show="filter==='all' || filter==='starter'" class="group relative overflow-hidden">
+      <img src="./assets/Imag/Feature Image5.png"
+           class=" w-full h-[400px] object-cover transition duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+      <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition">
+        <h2>Braised Sliced Abalone,Fish Maw with Premium Seafood</h2>
+        <span>Cold Dishes . Starters </span>
+      </div>
+    </div>
+
+    <div x-show="filter==='all' || filter==='dinner'||filter==='starter' " class="group relative overflow-hidden">
+      <img src="./assets/Imag/Feature Image6.png"
+           class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition"></div>
+      <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition">
+        <h2>Pan Fried Live Prawn with Superior Soy Sauce</h2>
+        <span>Starter . Dinner</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="https://unpkg.com/alpinejs" defer></script>
 </body>
 </html>
