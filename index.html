@@ -13,12 +13,12 @@
 <header class="relative z-10 container mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 py-6">
 
   <div class="flex items-center justify-between relative">
+    <!-- Logo -->
     <div class="flex items-center z-10">
-      <img 
-        src="./assets/Imag/Logo.svg"
-        alt="Logo"
-        class="w-[140px] sm:w-[170px] md:w-[200px]" />
+      <img src="./assets/Imag/Logo.svg" alt="Logo" class="w-[140px] sm:w-[170px] md:w-[200px]" />
     </div>
+
+    <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-6 xl:gap-10 2xl:gap-12 font-Inter text-base xl:text-lg absolute left-1/2 -translate-x-1/2">
       <a href="./index.html" class="hover:text-[#5C6B16] transition">Home</a>
       <a href="./Menu.html" class="hover:text-[#5C6B16] transition">Menu</a>
@@ -27,28 +27,46 @@
       <a href="./grids.html" class="hover:text-[#5C6B16] transition">Grids</a>
       <a href="./single portfolio.html" class="hover:text-[#5C6B16] transition">Portfolio</a>
     </nav>
-    <div class="flex items-center gap-3 sm:gap-5 md:gap-6 lg:gap-8 z-10">
 
-      <a href="tel:+86852346000"
-         class="hidden sm:flex items-center gap-2 text-sm md:text-base lg:text-lg whitespace-nowrap hover:text-[#5C6B16] transition">
-        <i class="fa-solid fa-phone text-xs"></i>
-        +86 852 346 000
+    <!-- Right Side -->
+    <div class="flex items-center gap-3 sm:gap-5 md:gap-6 lg:gap-8 z-10">
+      <a href="tel:+86852346000" class="hidden sm:flex items-center gap-2 text-sm md:text-base lg:text-lg whitespace-nowrap hover:text-[#5C6B16] transition">
+        <i class="fa-solid fa-phone text-xs"></i> +86 852 346 000
       </a>
 
-      <button
-        class="border border-foreground px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition duration-300">
+      <button class="border border-foreground px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition duration-300">
         Reservations
       </button>
 
+      <!-- Mobile menu button -->
       <button id="menuBtn" class="lg:hidden text-xl">
         <i class="fa-solid fa-bars"></i>
       </button>
-
     </div>
+  </div>
 
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden mt-4">
+    <ul class="flex flex-col gap-4 bg-white p-6 rounded shadow-lg">
+      <li><a href="./index.html" class="hover:text-[#5C6B16] transition">Home</a></li>
+      <li><a href="./Menu.html" class="hover:text-[#5C6B16] transition">Menu</a></li>
+      <li><a href="./contact.html" class="hover:text-[#5C6B16] transition">Contact</a></li>
+      <li><a href="./about.html" class="hover:text-[#5C6B16] transition">About</a></li>
+      <li><a href="./grids.html" class="hover:text-[#5C6B16] transition">Grids</a></li>
+      <li><a href="./single portfolio.html" class="hover:text-[#5C6B16] transition">Portfolio</a></li>
+    </ul>
   </div>
 
 </header>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 
 <!--hero section  -->
 
